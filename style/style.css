@@ -1,6 +1,6 @@
 .header {
-	color: #FF0000;
-	font-size: 40px;
-	font-weight: bold;
-	font-family: monospace;
+  padding: 80px;
+  text-align: center;
+  background: #000000;
+  color: white;
 }

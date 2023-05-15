@@ -1,2 +1,2 @@
-# flyingphantom.github.io
+# ishaan.github.io
 My website (WIP)

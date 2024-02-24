@@ -258,6 +258,23 @@ section {
     color: #4FC1E9;
 }
 
+@media (max-width: 768px) {
+    #home .text h2 {
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+    #home .text h4 {
+        font-size: 1.4rem;
+    }
+
+    #home .text h4 span {
+        font-size: 1.5rem;
+    }
+    .scroll {
+        display: none;
+    }
+}
+
 .heading {
     font-size: 3.5rem;
     color: rgb(32, 32, 32);

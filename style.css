@@ -592,6 +592,10 @@ section {
         padding: 0;
     }
 
+    .contactInfo p {
+        font-size: 1.2rem;
+    }
+
     .mailBtn {
         display: none;
     }

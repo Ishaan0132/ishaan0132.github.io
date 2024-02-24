@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
 
 * {
@@ -46,7 +45,7 @@ a {
     color: black;
 }
 
-header {
+.navbar {
     position: fixed;
     min-width: 100%;
     backdrop-filter: blur(16px);
@@ -59,7 +58,7 @@ header {
     z-index: 50;
 }
 
-header .logo {
+.logo {
     font-size: 2rem;
     font-weight: 800;
     text-decoration: none;
@@ -67,34 +66,23 @@ header .logo {
     margin: 1rem 5rem;
 }
 
-.navbar {
+.menu {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     padding: 1rem 3rem;
 }
 
-.navbar li {
-    display: inline-block;
-}
-
-.navbar ul {
+.menu li {
     list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.navbar a {
-    display: inline-block;
-    font-size: 1.5rem;
-    text-decoration: none;
-    margin: 0 2rem;
+.menu a {
     position: relative;
+    font-size: 1.5rem;
+    margin: 0 2rem;
     color: #0F1035;
 }
 
-.navbar a:after {
+.menu a:after {
     background: none repeat scroll 0 0 transparent;
     content: "";
     display: block;
@@ -106,16 +94,49 @@ header .logo {
     width: 0;
 }
 
-.navbar a:hover:after {
+.menu a:hover:after {
     width: 100%;
     left: 0;
 }
 
-#menu {
-    font-size: 3rem;
-    cursor: pointer;
-    color: rgb(24, 2, 63);
+
+input[type=checkbox] {
     display: none;
+}
+
+.bars {
+    display: none;
+    margin: 0 2rem;
+    font-size: 2rem;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: rgb(238 238 238);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+    }
+
+    .menu li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    .bars {
+        display: block;
+    }
 }
 
 section {
@@ -236,6 +257,23 @@ section {
     color: #4FC1E9;
 }
 
+@media (max-width: 768px) {
+    #home .text h2 {
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+    #home .text h4 {
+        font-size: 1.4rem;
+    }
+
+    #home .text h4 span {
+        font-size: 1.5rem;
+    }
+    .scroll {
+        display: none;
+    }
+}
+
 .heading {
     font-size: 3.5rem;
     color: rgb(32, 32, 32);
@@ -255,6 +293,7 @@ section {
 
 #about img {
     width: 30rem;
+    max-width: 100%;
 }
 
 #about .column {
@@ -264,6 +303,20 @@ section {
 #about p {
     font-size: 1.2rem;
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .aboutRow {
+        flex-direction: column;
+    }
+
+    #about .column {
+        max-width: 100%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
 }
 
 #skillsContainer {
@@ -298,10 +351,16 @@ section {
     background-color: #80808017;
 }
 
+@media (max-width: 768px) {
+    #skillsContainer {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 .projectsContainer {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 55%;
+    width: 65%;
     margin: auto;
 }
 
@@ -345,6 +404,13 @@ section {
     font-size: 1.5rem;
     line-height: 1.2;
     margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .projectsContainer {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 85%;
+    }
 }
 
 #education {
@@ -425,6 +491,27 @@ section {
     color: #888;
 }
 
+@media (max-width: 768px) {
+    .edContainer:before {
+        left: 8px;
+        width: 2px;
+    }
+
+    .ed {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .edRight {
+        float: none;
+    }
+
+    .edLeft {
+        float: none;
+        direction: ltr;
+    }
+}
+
 #contact {
     min-height: 80vh;
 }
@@ -492,10 +579,27 @@ section {
     box-shadow: rgb(24, 66, 220) 0px 7px 29px 0px;
 }
 
+@media screen and (max-width: 768px) {
+    .column {
+        max-width: 100%;
+    }
+
+    .column h4 {
+        font-size: 2rem;
+    }
+
+    .row .column {
+        padding: 0;
+    }
+
+    .mailBtn {
+        display: none;
+    }
+}
+
 footer {
     background-color: white;
     width: 100%;
-    color: rgba(110, 103, 103, 0.927);
 }
 
 footer div {
@@ -512,9 +616,20 @@ footer div p {
     font-size: 0.9rem;
     line-height: 1.2rem;
     margin-top: 0.5rem;
+    color: rgba(110, 103, 103, 0.927);
+}
+
+footer div a {
+    color: rgba(110, 103, 103, 0.43);
 }
 
 footer div p span {
     font-weight: 600;
     color: #4FC1E9;
+}
+
+@media screen and (max-width: 768px) {
+    footer div {
+        flex-direction: column;
+    }
 }

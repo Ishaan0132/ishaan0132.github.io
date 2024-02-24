@@ -294,6 +294,7 @@ section {
 
 #about img {
     width: 30rem;
+    max-width: 100%;
 }
 
 #about .column {
@@ -303,6 +304,20 @@ section {
 #about p {
     font-size: 1.2rem;
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .aboutRow {
+        flex-direction: column;
+    }
+
+    #about .column {
+        max-width: 100%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
 }
 
 #skillsContainer {
@@ -337,10 +352,16 @@ section {
     background-color: #80808017;
 }
 
+@media (max-width: 768px) {
+    #skillsContainer {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 .projectsContainer {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 55%;
+    width: 65%;
     margin: auto;
 }
 
@@ -384,6 +405,13 @@ section {
     font-size: 1.5rem;
     line-height: 1.2;
     margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .projectsContainer {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 85%;
+    }
 }
 
 #education {
@@ -464,6 +492,27 @@ section {
     color: #888;
 }
 
+@media (max-width: 768px) {
+    .edContainer:before {
+        left: 8px;
+        width: 2px;
+    }
+
+    .ed {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .edRight {
+        float: none;
+    }
+
+    .edLeft {
+        float: none;
+        direction: ltr;
+    }
+}
+
 #contact {
     min-height: 80vh;
 }
@@ -531,10 +580,27 @@ section {
     box-shadow: rgb(24, 66, 220) 0px 7px 29px 0px;
 }
 
+@media screen and (max-width: 768px) {
+    .column {
+        max-width: 100%;
+    }
+
+    .column h4 {
+        font-size: 2rem;
+    }
+
+    .row .column {
+        padding: 0;
+    }
+
+    .mailBtn {
+        display: none;
+    }
+}
+
 footer {
     background-color: white;
     width: 100%;
-    color: rgba(110, 103, 103, 0.927);
 }
 
 footer div {
@@ -551,9 +617,20 @@ footer div p {
     font-size: 0.9rem;
     line-height: 1.2rem;
     margin-top: 0.5rem;
+    color: rgba(110, 103, 103, 0.927);
+}
+
+footer div a {
+    color: rgba(110, 103, 103, 0.43);
 }
 
 footer div p span {
     font-weight: 600;
     color: #4FC1E9;
+}
+
+@media screen and (max-width: 768px) {
+    footer div {
+        flex-direction: column;
+    }
 }

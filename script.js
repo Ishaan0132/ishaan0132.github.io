@@ -1,12 +1,3 @@
-const menu = document.getElementById("menu");
-const navbar = document.querySelector(".navbar");
-eventListener();
-function eventListener() {
-menu.addEventListener('click', () => {
-    navbar.classList.toggle('nav-toggle');
-});
-}
-
 async function fetchData() {
     let response = await fetch("skills.json");
     const data = await response.json();

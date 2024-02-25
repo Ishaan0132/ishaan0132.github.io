@@ -262,6 +262,7 @@ section {
         font-size: 3rem;
         margin-top: 4rem;
     }
+
     #home .text h4 {
         font-size: 1.4rem;
     }
@@ -269,6 +270,7 @@ section {
     #home .text h4 span {
         font-size: 1.5rem;
     }
+
     .scroll {
         display: none;
     }
@@ -366,7 +368,7 @@ section {
 @media (max-width: 530px) {
     #skillsContainer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1;
+        gap: 0;
     }
 }
 
@@ -419,7 +421,7 @@ section {
     margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
     .projectsContainer {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         width: 85%;
@@ -503,6 +505,7 @@ section {
     word-spacing: 1px;
     color: #888;
 }
+
 
 @media (max-width: 768px) {
     .edContainer:before {
@@ -645,7 +648,7 @@ footer div p span {
     color: #4FC1E9;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     footer div {
         flex-direction: column;
     }

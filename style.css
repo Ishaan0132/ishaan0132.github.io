@@ -111,7 +111,7 @@ input[type=checkbox] {
     user-select: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1154px) {
     .menu {
         display: none;
         position: absolute;
@@ -305,7 +305,7 @@ section {
     line-height: 1.5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1154px) {
     .aboutRow {
         flex-direction: column;
     }
@@ -349,6 +349,12 @@ section {
     width: 6rem;
     border-radius: 50px;
     background-color: #80808017;
+}
+
+@media (max-width: 980px) {
+    #skillsContainer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
@@ -586,7 +592,7 @@ section {
     box-shadow: rgb(24, 66, 220) 0px 7px 29px 0px;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1274px) {
     .column {
         max-width: 100%;
     }
@@ -639,7 +645,7 @@ footer div p span {
     color: #4FC1E9;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     footer div {
         flex-direction: column;
     }

@@ -589,7 +589,6 @@ section {
 }
 
 .mailBtn:hover {
-    letter-spacing: 3px;
     background-color: #0F1035;
     color: hsl(0, 0%, 100%);
     box-shadow: rgb(24, 66, 220) 0px 7px 29px 0px;

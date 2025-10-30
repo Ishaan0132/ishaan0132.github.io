@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
   <title>Ishaan Shaikh - Portfolio</title>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
@@ -35,8 +35,10 @@
     <div class="text">
       <h2> I'm Ishaan Shaikh.</h2>
       <h4>talk to me about <span id="typing"></span></h4>
-      <p>I'm a Mumbai based web developer, web designer and a tech enthusiast creating awesome and effective visual
-        identities for companies of all sizes around the globe. Let's start scrolling and learn more about me. </p>
+      <p>I am a web developer and AI enthusiast passionate about building intelligent and user-focused digital solutions. 
+        I enjoy combining creativity, functionality, and technology to craft seamless experiences.
+        I am always exploring new tools and technologies to push the boundaries of what is possible on the web.
+      </p>
       <div class="socials">
         <a href="https://twitter.com/Ishaan0132" target="_blank"><i class="ri-twitter-x-fill"></i>
           <a href="https://www.linkedin.com/in/ishaan0132/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
@@ -90,26 +92,77 @@
     </div>
   </section>
   <section id="projects">
-    <h2 class="heading">Projects</h2>
-    <div class="projectsContainer">
-      <a href="https://ishaan0132.github.io/WaterFootprint-Calaculator/" target="_blank">
-        <div><img alt="Aquameter" sizes="100vw"
-            src="https://s6.imgcdn.dev/tL8gL.md.png"></div>
-        <h3>Aquameter</h3>
-        <p>A Water footprint calculator.</p>
-      </a>
-      <a href="https://github.com/Ishaan0132/Phantom-Ozonix" target="_blank">
-        <div><img alt="Phantom Ozonix" sizes="100vw"
-            src="https://s6.imgcdn.dev/tbdPy.png"></div>
-        <h3>Phantom Ozonix</h3>
-        <p>A chatbot for pokemon showdown.</p>
-      </a>
-      <a href="https://github.com/ISenseAura/tutorial-app" target="_blank">
-        <div><img alt="Tutorial App" sizes="100vw"
-            src="https://s6.imgcdn.dev/tLpSw.md.png"></div>
-        <h3>Tutorial App</h3>
-        <p>An app containing tutorials in native languages.</p>
-      </a>
+    <div class="container">
+      <h2 class="heading">Featured Projects</h2>
+      <div class="projectGrid">
+        <article class="projectCard">
+          <div class="projectContent">
+            <h3>Virtual Try On for Clothes</h3>
+            <p>
+              Real-time garment try-on application built with Unity3D, OpenCV, and Mediapipe. Utilized a UNet-based segmentation model trained on the VITON dataset to enable precise clothing overlay and seamless simulation blending.
+            </p>
+            <div class="techStack">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>Mediapipe</span>
+              <span>Unity3D</span>
+            </div>
+            <div class="projectLink">
+              <a href="https://github.com/Ishaan0132/Virtual-Try-On">View Project →</a>
+            </div>
+          </div>
+        </article>
+        <article class="projectCard">
+          <div class="projectContent">
+            <h3>Security Monitoring with AI Chatbot</h3>
+            <p>
+              AI-powered security system integrating Suricata and Wazuh for real-time threat detection and alerts. Developed a chatbot interface using Python to provide users with instant access to security logs and incident reports.
+            </p>
+            <div class="techStack">
+              <span>Python</span>
+              <span>Suricata</span>
+              <span>Wazuh</span>
+            </div>
+            <div class="projectLink">
+              <a href="https://github.com/Ishaan0132/Inheritance">View Project →</a>
+            </div>
+          </div>
+        </article>
+        <article class="projectCard">
+          <div class="projectContent">
+            <h3>SilentCAPTCHA</h3>
+            <p>
+              Built a passive CAPTCHA alternative using browser fingerprinting and mouse tracking to identify bots. Developed the frontend with HTML, CSS, and JavaScript to ensure seamless, accessible user verification.
+            </p>
+            <div class="techStack">
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+            <div class="projectLink">
+              <a href="https://github.com/KrishShah3011/Captcha">View Project →</a>
+            </div>
+          </div>
+        </article>
+        <article class="projectCard">
+          <div class="projectContent">
+            <h3>Multi-purpose Chatbot</h3>
+            <p>
+              Built a Node.js chatbot to automate multiple website tasks, update tournament data via the File System module, and fetch dynamic content like jokes and images through external APIs.
+            </p>
+            <div class="techStack">
+              <span>Node.js</span>
+              <span>APIs</span>
+              <span>File System</span>
+            </div>
+            <div class="projectLink">
+              <a href="https://github.com/Ishaan0132/Phantom-Ozonix">View Project →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
   <section id="education">
@@ -121,7 +174,7 @@
         <div class="desc">
           <h3>Veermata Jijabai Technological Institute</h3>
           <span>BTech Computer Engineering</span>
-          <p>Participated in my first Hackathon<br>Developed interest for Competitive Programming<br>Improved presentation skills </p>
+          <p>Participated in multiple competitions<br>Explored domains like Deep learning, Cyber Security, Game Development<br>Mentored junior students in coding practices</p>
         </div>
       </div>
 
@@ -130,7 +183,8 @@
         <div class="desc">
           <h3>Thomas Baptista Junior College</h3>
           <span>HSC Science</span>
-          <p>Focused mainly on entrance exams <br>Scored 93.17% in boards, 2nd in college <br>Secured 42nd rank in CET</p>
+          <p>Focused mainly on entrance exams <br>Scored 93.17% in boards, 2nd in college <br>Secured 42nd rank in CET
+          </p>
         </div>
       </div>
     </div>
@@ -157,16 +211,10 @@
       </div>
     </div>
   </section>
-  <footer>
-    <div>
-      <p>Made by <span>Ishaan Shaikh</span></p>
-    <a href="https://www.vecteezy.com/free-png/developer">Developer PNGs by Vecteezy</a>
-  </div>
-  </footer>
   <script src="script.js"></script>
   <script>
     var typed = new Typed('#typing', {
-      strings: ['Frontend Development', 'Competitive Programming'],
+      strings: ['Web Development', 'Machine Learning', 'Open Source', 'Cyber Security', 'Game Development', 'Competitive Programming'],
       typeSpeed: 70,
       backSpeed: 40,
       shuffle: true,
